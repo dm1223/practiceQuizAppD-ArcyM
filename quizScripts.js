@@ -77,6 +77,20 @@ const questions = [
 
    nextQButton.addEventListener("click", nextQuestion);
 
+   function nextQuestion() {
+     currentQuestion++;
+     if (currentQuestion < questions.length) {
+     loadQuestion();
+     } else {
+     questionElement.textContent = "Quiz completed!";
+     nextQButton.forEach(button => button.style.display =
+    "none");
+     feedbackElement.textContent = "Great job!";
+     nextButton.style.display = "none";
+     }
+    }
+    
+
 
 
    
